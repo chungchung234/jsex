@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jsex:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>jsex</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jsex-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jsex:war exploded" />
+    </root>
+  </artifact>
+</component>
