@@ -10,8 +10,25 @@
 <p>HelloServlet</p>
 <p>World!</p>
 
+<button type="button" onclick="listFunc()">nodelist</button>
+
+<script type="text/javascript">
+    function listFunc() {
+        let nodelist = document.getElementsByTagName("p");
+        alert(nodelist.length);
+
+        nodelist[2].innerHTML = "no problem"
+
+        for(i=0; i<nodelist.length; i++) {
+            nodelist[i].style.backgroundColor = '#f0f';
+        }
+    }
+</script>
+
+<form action="">
 
 
+</form>
 
 </body>
 </html>

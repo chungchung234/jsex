@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw2</title>
+</head>
+<body>
+<h1>체육관 이용 요금</h1>
+<br>
+<br>
+기본 사용료(4시간)40,800원
+<br>
+<input type="checkbox" name="gym" onchange="func()">야간조명(20,000원)<br>
+<input type="checkbox" name="gym" onchange="func()">배구 네트 x2장(4,000원)<br>
+<input type="checkbox" name="gym" onchange="func()">배구공 x 10(20,000원)
+<br>
+합계금액: <input type="text" id="result" value="40800">원정
+<script type="text/javascript">
+    function func(){
+        let result = parseInt(document.getElementById("result").value)
+        for (var i = 0; i < 3; i++) {
+            if (document.getElementsByName("gym")[i]) {
+                switch (i) {
+                    case 0:
+                        result = result + 20000;
+                        break;
+                    case 1:
+                        result = result + 4000;
+                        break;
+                    case 2:
+                        result = result + 20000;
+                }
+            }
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

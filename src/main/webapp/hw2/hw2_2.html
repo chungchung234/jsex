@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw2</title>
+</head>
+<body>
+
+<h4>라면 타이머</h4>
+<br>
+<br>
+<select id="select" value="select your time">
+
+    <option value="5">5min</option>
+    <option value="3">3min</option>
+    <option value="2">2min</option>
+    <option value="1">1min</option>
+</select>
+<button type="button" value="GO" id="go" onclick="go()">Go</button>
+<script type="text/javascript">
+
+    function go() {
+        let time = document.getElementById("select").value;
+
+        setInterval("time()", 1000);
+
+    }
+    function time() {
+        time = time -1;
+        document.getElementById("select").value =
+    }
+
+
+    </script>
+</body>
+</html>

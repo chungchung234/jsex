@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw1</title>
+</head>
+<body>
+a,b에 대해서 변수 a와 b의 계산 결과를 표시합니다
+<button type="button" id="1" onclick="plus()">plus</button>
+<button type="button" id="2" onclick="minus()">minus</button>
+<button type="button" id="3" onclick="mul()">mul</button>
+<button type="button" id="4" onclick="div()">div</button>
+<button type="button" id="5" onclick="rem()">rem</button>
+<br>
+<br>
+<input type="text" id="num1">
+<input type="text" id="oper">
+<input type="text" id="num2">
+=
+<input type="text" id="result">
+<script type="text/javascript">
+    function plus() {
+        let num1 = document.getElementById('num1').value;
+        document.getElementById('oper').value = '+';
+        let num2 = document.getElementById('num2').value;
+        document.getElementById('result').value = parseInt(num1) +parseInt(num2);
+
+    }
+    function minus() {
+        let num1 = document.getElementById('num1').value;
+        document.getElementById('oper').value = '-';
+        let num2 = document.getElementById('num2').value;
+        document.getElementById('result').value = parseInt(num1) - parseInt(num2);
+    }
+    function mul() {
+        let num1 = document.getElementById('num1').value;
+        document.getElementById('oper').value = '*';
+        let num2 = document.getElementById('num2').value;
+        document.getElementById('result').value = parseInt(num1) *parseInt(num2);
+    }
+    function div() {
+        let num1 = document.getElementById('num1').value;
+        document.getElementById('oper').value = '/'
+        let num2 = document.getElementById('num2').value;
+        document.getElementById('result').value = parseInt(num1)/parseInt(num2);
+    }
+    function rem() {
+        let num1 = document.getElementById('num1').value;
+        document.getElementById('oper').value = '%';
+        let num2 = document.getElementById('num2').value;
+        document.getElementById('result').value = parseInt(num1)%parseInt(num2);
+    }
+</script>
+</body>
+</html>
