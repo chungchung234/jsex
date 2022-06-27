@@ -7,7 +7,8 @@
 <body>
 
 변수(variable)
-
+<br>
+<p id="demo">demo </p>
 <script type="text/javascript">
     var v;
     v=1;
@@ -18,9 +19,64 @@
 
     cars = new Array(3);
     cars[0] = 1;
+    for (let i=0; i<cars.length; i++){
 
+    }
+    for (const x in cars) {
+
+    }
+    cars.forEach(
+        element => console.log(element)
+    )
+
+    let obj = {
+        firstName: "John",
+        lastName: "Doe",
+        age: "16",
+        func:function(){
+            console.log( 'function call')
+        }
+
+    }
+
+    console.log( obj.firstName);
+    class Person{
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        print() {
+            console.log( 'name: ' + this.name + ' age: ' + this.age );
+        }
+
+    }
+
+    let obj1 = new Person('aaa',11);
+    console.log( obj1.name);
+    document.getElementById('demo').innerHTML = obj1.name + ' ' + obj1.age;
+
+
+    document.getElementById('text').innerHTML = "버튼클릭";
+
+
+    function btnFunc(n){
+        let name = '';
+
+        if( n === 1){
+            name = 'input button';
+
+        }else{
+            name = ' button';
+        }
+
+        document.getElementById('text').value = name;
+    }
 
 </script>
+<input type="button" value="input" onclick="btnFunc()" >
+<br>
+<button type="button" onclick="btnFunc()"> 클릭</button>
+
 
 </body>
 </html>

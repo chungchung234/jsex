@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo">Welcome</p>
+<br/>
+<button type="button" onclick="displayDate()">click</button>
+
+<script type="text/javascript">
+    function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+
+    setInterval("displayDate()", 1000);
+
+</script>
+
+
+<br><br>
+<p id="date"></p>
+<script type="text/javascript">
+
+    let d = new Date();
+//    d= new Date(2022,6 -1,27,9,15,0,0);
+    d= new Date("October 12, 2022 14:35:58");
+    //document.getElementById("date").innerHTML = d;
+    document.getElementById("date").innerHTML = d.getFullYear();
+</script>
+
+
+</body>
+</html>
