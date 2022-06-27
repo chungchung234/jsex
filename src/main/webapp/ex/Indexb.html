@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="pid">p tag pid</p>
+<br>
+
+<p class="cls">p tage class = cls</p>
+<h3 class="cls"> h3 cls</h3>
+<br>
+
+<p name="name">p name</p>
+<p name="name"> p2 name</p>
+
+
+<button type="button" onclick="func()">button</button>
+
+
+
+<script type="text/javascript">
+    function func() {
+
+        document.getElementById("pid").innerHTML = 'p 태그 입니다.';
+        document.getElementsByClassName("cls")[1].innerHTML = 'cls class '
+        document.getElementsByName("name")[1].innerHTML = 'name 은 name'
+    }
+
+
+</script>
+
+<br>
+
+<div id = "demo" style="background-color: #ffffff"> hello js</div>
+<button type="button" onclick="proc()">button</button>
+
+<script type="text/javascript">
+    function proc() {
+        let obj = document.getElementById("demo");
+        obj.style.color = "#fff";
+        obj.style.backgroundColor = "#333";
+    }
+</script>
+
+
+</body>
+</html>
