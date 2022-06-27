@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="viewScroll()">
+<!--<body onload="checkMessage()">-->
+<!--onload-->
+<!--<p id="p1"></p>-->
+<!--<script type="text/javascript">-->
+<!--    function checkMessage() {-->
+<!--        document.getElementById('p1').innerHTML = 'checkMessage call';-->
+<!--    }-->
+<!--    </script>-->
+
+<pre>
+    a
+    a
+    a
+    a
+    a
+    a
+    a
+    a
+    a
+    a
+
+    aa
+
+
+    a
+    a
+    a
+    a
+    a
+    a
+    a
+    a
+
+    a
+    a
+    a
+    a
+    a
+
+    a
+    a
+    a
+    a
+
+    a
+    a
+    a
+
+    a
+    a
+    a
+    a
+    a
+    a
+
+    a
+    a
+    a
+    a
+    a
+    a
+
+    a
+    a
+    a
+    a
+    a
+    a
+
+    a
+    a
+    a
+    a
+    a
+
+    a
+    a
+    a
+    a
+
+    a
+</pre>
+<script type="text/javascript">
+
+    let posY =0;
+    function viewScroll() {
+        window.scroll(0,posY);
+
+        posY = posY +2;
+        if(posY === window.innerHeight){
+            posY =0;
+        }
+        setInterval(viewScroll,100)
+
+    }
+</script>
+
+
+
+</body>
+</html>

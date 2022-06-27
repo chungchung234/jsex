@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+age:<input type="text" onblur="isRegAge()">new
+<br>
+
+<script type="text/javascript">
+    function isRegAge() {
+        alert("onblur")
+    }
+</script>
+
+우편번호: <br>
+<input type="text" onchange="isPostNum(this)">
+-
+<input type="text" onchange="isPostNum(this)">
+<br>
+<script type="text/javascript">
+    function isPostNum(obj) {
+        let str = obj.value;
+
+        if(str.match(/[^0-9]/g)){
+            alert("String input")
+        }
+    }
+
+</script>
+
+<select id="sel" onchange="changeValue(this)">
+    <option value="apple">apple</option>
+    <option value="pear">pear</option>
+    <option value="banana">banana</option>
+</select>
+
+<script type="text/javascript">
+    function changeValue(a) {
+
+        alert('changeValue'+ a.value);
+    }
+</script>
+
+<input type="text"name="input">
+<input type="text" name="input">
+
+<script type="text/javascript">
+
+    document.getElementsByName("input")[0].onkeydown = function(e) {
+        console.log("keydown :"+e.keyCode);
+
+
+    }
+    document.getElementsByName("input")[1].onkeypress = function(e) {
+        console.log("keydown :" + e.keyCode);
+
+    }
+</script>
+
+<br>
+<input type="image" src="../images/san0.gif" onmousedown="mousedown(this)" onmouseup="mouseup(this)" onmouseover="mouseover(this)"
+       onmouseout="mouseout()">
+
+<script type="text/javascript">
+    function mouseout(obj){
+        obj.src="../images/san1.gif";
+    }
+    function mouseover(obj){
+        obj.src="../images/san2.gif";
+    }
+    function mouseup(obj){
+        obj.src="../images/san1.gif";
+    }
+    function mousedown(obj){
+        obj.src="../images/san2.gif";
+    }
+</script>
+<br>
+<br>
+
+<a href="#" onmouseover="document.box.src='../images/surprise.gif'"
+onmouseout = "document.box.src='../images/box.gif'">
+    <img alt="" src = "../images/box.gif" name="box">
+</a>
+
+</body>
+</html>

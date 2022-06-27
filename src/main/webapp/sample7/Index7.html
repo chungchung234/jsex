@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo">p tag id=demo</p>
+
+<button type="button" onclick="func()">button</button>
+
+<script type="text/javascript">
+    function func() {
+        let text = document.getElementById("demo").childNodes[0].nodeValue;
+        alert(text);
+    }
+</script>
+<br>
+
+<select id="cars">
+    <option>benz</option>
+    <option>baz</option>
+    <option>baz</option>
+</select>
+
+<button type="button" onclick="carfunc()">button</button>
+
+<script type="text/javascript">
+    function carfunc() {
+        let carName = document.getElementById('cars').childNodes;
+        //alert(carName.length);
+        alert(carName[1].text);
+    }
+</script>
+
+<br>
+
+<div id="div1">
+    <p id="p1">first p</p>
+    <p id="p2">second p</p>
+</div>
+
+<button type="button" onclick="appendFunc()">append</button>
+<button type="button" onclick="insertFunc()">insert</button>
+<button type="button" onclick="deleteFunc()">delete</button>
+
+<script type="text/javascript">
+    function appendFunc() {
+        let ptag = document.createElement('p');
+        let textNode = document.createTextNode('new ptag');
+
+        ptag.id ='newPid';
+        ptag.className = 'newPclass';
+
+        ptag.appendChild(textNode);
+
+        let element = document.getElementById('div1');
+        element.appendChild(ptag);
+    }
+    function insertFunc() {
+        let ptag = document.createElement('p');
+        let textNode = document.createTextNode('new ptag');
+
+
+
+        ptag.appendChild(textNode);
+
+        let element = document.getElementById('div1');
+        elementBefore = document.getElementById('p2');
+
+        element.insertBefore(ptag, elementBefore);
+    }
+    function deleteFunc() {
+
+        let element = document.getElementById('div1');
+        let removeElement = document.getElementById('p2');
+        element.removeChild(removeElement);
+
+    }
+
+
+</script>
+</body>
+</html>
